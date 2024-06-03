@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd"
+         backupStaticProperties="false"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         processIsolation="false"
+         stopOnFailure="false"
+>
+    <testsuites>
+        <testsuite name="laravel-postal tests">
+            <directory suffix="Test.php">./tests/</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <server name="APP_DEBUG" value="true"/>
+        <server name="APP_ENV" value="testing"/>
+        <server name="APP_KEY" value="AckfSECXIvnK5r28GVIWUAxmbBSjTsmF"/>
+        <server name="DB_CONNECTION" value="testing"/>
+        <server name="MAIL_DRIVER" value="postal"/>
+        <server name="MAIL_MAILER" value="postal"/>
+    </php>
+    <!-- <coverage>
+        <report>
+            <html outputDirectory="coverage-html"/>
+        </report>
+    </coverage> -->
+    <source>
+        <include>
+            <directory suffix=".php">./src</directory>
+        </include>
+    </source>
+</phpunit>

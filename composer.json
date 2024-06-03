@@ -1,0 +1,36 @@
+{
+  "name": "evo-mark/evo-laravel5-postalv2",
+  "description": "This library integrates Postal with the standard Laravel mail framework.",
+  "keywords": [
+    "Laravel",
+    "Postal",
+    "Email"
+  ],
+  "homepage": "https://github.com/evo-mark/evo-laravel5-postalv2",
+  "license": "MIT",
+  "require": {
+    "php": "^7.4",
+    "laravel/framework": "^5.8.0",
+    "postal/postal": "^2.0.1"
+  },
+  "require-dev": {},
+  "autoload": {
+    "psr-4": {
+      "SynergiTech\\Postal\\": "src",
+      "SynergiTech\\Postal\\Tests\\": "tests"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "SynergiTech\\Postal\\PostalServiceProvider"
+      ]
+    }
+  },
+  "scripts": {
+    "test": [
+      "phpunit",
+      "phpstan --memory-limit=1G"
+    ]
+  }
+}
